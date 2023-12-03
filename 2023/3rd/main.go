@@ -26,6 +26,8 @@ func main() {
 	}
 	part1Result := gearratios.Part1(schematicLines)
 	fmt.Println("part 1:", part1Result)
+	part2Result := gearratios.Part2(schematicLines)
+	fmt.Println("part 2:", part2Result)
 
 	file.Close()
 }
