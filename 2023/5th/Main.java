@@ -27,8 +27,13 @@ public class Main {
 
     var content = readInputContent("IfYouGiveASeedAFertilizer.txt");
     var ifYouGiveASeedAFertilizer = new IfYouGiveASeedAFertilizer(content);
-    long part1 = ifYouGiveASeedAFertilizer.getLowestLocation();
 
+    long part1 = ifYouGiveASeedAFertilizer.getLowestLocation1();
     System.out.println("part 1: " + Long.toString(part1));
+
+    // DAMN...
+    // TODO: Maybe later improvement?
+    long part2 = ifYouGiveASeedAFertilizer.getLowestLocation2();
+    System.out.println("part 2: " + Long.toString(part2));
   }
 }
