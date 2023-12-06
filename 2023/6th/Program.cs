@@ -6,7 +6,7 @@
 /// Where t1,2 are one of the times the recorder had to hold
 /// the button for getting to the given d (distance) with T (length of race).
 /// </summary>
-double GetWaysToBeatRecord(int T, int d)
+double GetWaysToBeatRecord(long T, long d)
 {
     double t1 = (T + Math.Sqrt(T * T - 4 * d)) / 2;
     double t2 = (T - Math.Sqrt(T * T - 4 * d)) / 2;
@@ -20,6 +20,7 @@ var timesStr = sr.ReadLine();
 var distancesStr = sr.ReadLine();
 if (timesStr == null || distancesStr == null)
 {
+    sr.Close();
     Console.WriteLine("Cannot read necessary lines from input.");
     Environment.Exit(1);
 }
@@ -42,3 +43,7 @@ for (int i = 0; i < times.Length; i++)
 }
 
 Console.WriteLine("Part 1: {0}", part1Result);
+
+// Part 2
+double part2Restult = GetWaysToBeatRecord(long.Parse(string.Join("", times)), long.Parse(string.Join("", distances)));
+Console.WriteLine("Part 2: {0}", part2Restult);
